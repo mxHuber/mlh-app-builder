@@ -1,4 +1,17 @@
+#include "mlh-renderer/include/Renderer.hpp"
 
-// TODO: include mlh-renderer and build test app
+// TODO:
+// - Build app to export layout in json
+// - Add features to mlh-renderer as needed
+// ---> For example: what about Sliders? Input fields? Etc.
 
-int main() { return 0; }
+int main() {
+  mlh::Renderer App = mlh::Renderer();
+
+  App.setShader("../external/mlh-renderer/resources/Shaders/Vertex.shader",
+                "../external/mlh-renderer/resources/Shaders/Fragment.shader");
+
+  App.runLoop();
+
+  return 0;
+}
